@@ -1,11 +1,9 @@
-package GUI;
+package Item.GUI;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-import Item.*;
 
 public class GUIItemDialog extends JDialog {
     private Item item;

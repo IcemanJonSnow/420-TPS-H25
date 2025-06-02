@@ -1,4 +1,4 @@
-package GUI;
+package Item.GUI;
 
 import Exceptions.ExceptionInsufficientQuantityInStock;
 import Exceptions.ExceptionItemAlreadyExists;
@@ -10,7 +10,7 @@ import java.awt.*;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
 import Inventaire.*;
-import Item.*;
+import Item.Item.Category;
 
 public class GUIInventoryManager extends JFrame
 {

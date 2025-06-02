@@ -1,13 +1,8 @@
 import Exceptions.ExceptionInsufficientQuantityInStock;
 import Exceptions.ExceptionItemAlreadyExists;
 import Exceptions.ExceptionItemNotFound;
-import GUI.GUIInventoryManager;
 import Inventaire.InventoryManager;
 import Item.Item;
-
-import java.io.*;
-import java.util.regex.Pattern;
-import java.util.regex.MatchResult;
 
 public class TestingMain  {
 
