@@ -1,7 +1,7 @@
 package Item.Exceptions;
 
-public class ExceptionInsufficientQuantityInStock extends Exception {
+public class ExceptionInsufficientQuantityInStock extends RuntimeException {
     public ExceptionInsufficientQuantityInStock(int quantity) {
-        System.out.println("Insufficient Quantity in Stock");
+        super("Item " + quantity + " est déjà dans la bases de données");
     }
 }

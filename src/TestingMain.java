@@ -37,33 +37,33 @@ public class TestingMain  {
         inventoryManager.removeItem(10);
 
         System.out.println("\n=> TEST Enlever un item non existant (catch exception)");             // 6 points
-        //try {
-        //    inventoryManager.removeItem(10);
-        //} catch (ExceptionItemNotFound e) {
-        //    System.out.println(e.getMessage());
-        //}
+        try {
+            inventoryManager.removeItem(10);
+        } catch (ExceptionItemNotFound e) {
+            System.out.println(e.getMessage());
+        }
 
         System.out.println("\n=> TEST Incrémenter la quantité d'un item");                          // 8 points
-        //try {
-        //    inventoryManager.increaseItemQuantity(10, 18);
-        //} catch (ExceptionItemNotFound e) {
-        //    System.out.println(e.getMessage());
-        //}
-        //try {
-        //    inventoryManager.increaseItemQuantity(11, 3);
-        //} catch (ExceptionItemNotFound e) {
-        //    System.out.println(e.getMessage());
-        //}
-        //try {
-        //   inventoryManager.increaseItemQuantity(12, 4);
-        //} catch (ExceptionItemNotFound e) {
-        //    System.out.println(e.getMessage());
-        //}
-        //try {
-        //    inventoryManager.increaseItemQuantity(13, 23);
-        //} catch (ExceptionItemNotFound e) {
-        //    System.out.println(e.getMessage());
-        //}
+        try {
+            inventoryManager.increaseItemQuantity(10, 18);
+        } catch (ExceptionItemNotFound e) {
+            System.out.println(e.getMessage());
+        }
+        try {
+            inventoryManager.increaseItemQuantity(11, 3);
+        } catch (ExceptionItemNotFound e) {
+            System.out.println(e.getMessage());
+        }
+        try {
+           inventoryManager.increaseItemQuantity(12, 4);
+        } catch (ExceptionItemNotFound e) {
+            System.out.println(e.getMessage());
+        }
+        try {
+            inventoryManager.increaseItemQuantity(13, 23);
+        } catch (ExceptionItemNotFound e) {
+            System.out.println(e.getMessage());
+        }
 
         System.out.println("\n=> TEST Incrementer la quantité d'un item et afficher les nouvelles informations"); // 6 points
         inventoryManager.increaseItemQuantity(11, 25);
