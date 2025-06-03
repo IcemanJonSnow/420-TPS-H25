@@ -70,6 +70,6 @@ public abstract class Item {
     }
     
     public String toString() {
-        return "";
+        return this.infoToString();
     }
 }
