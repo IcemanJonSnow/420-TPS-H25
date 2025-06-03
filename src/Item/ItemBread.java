@@ -26,6 +26,7 @@ public class ItemBread extends Item {
     public void setWeight(double weight) {this.weight = weight;}
     
     public String infoToString() {
-        return "";
+        return "Item Information \n Id \t: " + getId() + "\nName \t: " + getName() + "\n Price \t: " + getPrice() +
+                "\nIn stock\t: " + getQuantityInStock() + "\n Color\t: " + getColor() +  "\n Weight \t: " + getWeight();
     }
 }

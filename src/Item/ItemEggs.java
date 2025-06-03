@@ -26,6 +26,7 @@ public class ItemEggs extends Item {
     public void setNumber(int number) {this.number = number;}
     
     public String infoToString(){
-        return "";
+        return "Item Information \n Id \t: " + getId() + "\nName \t: " + getName() + "\n Price \t: " + getPrice() +
+                "\nIn stock\t: " + getQuantityInStock() + "\n Color\t: " + getColor() +  "\n Number \t: " + getNumber();
     }
 }

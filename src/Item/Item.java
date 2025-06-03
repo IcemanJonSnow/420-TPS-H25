@@ -41,7 +41,32 @@ public abstract class Item {
     }
     
     public String infoToString() {
-        return "";
+        String info = "";
+        switch (category) {
+            case Eggs ->
+            {
+                ItemEggs item = (ItemEggs)this;
+                 info = "Item Information \n Id \t: " + item.getId() + "\nName \t: " + item.getName() + "\n Price \t: " + item.getPrice() +
+                        "\nIn stock\t: " + item.getQuantityInStock() + "\n Color\t: " + item.getColor() +  "\n Number \t: " + item.getNumber();
+            }
+            case Bread ->
+            {
+                ItemBread item = (ItemBread) this;
+                info = "Item Information \n Id \t: " + item.getId() + "\nName \t: " + item.getName() + "\n Price \t: " + item.getPrice() +
+                        "\nIn stock\t: " + item.getQuantityInStock() + "\n Color\t: " + item.getColor() +  "\n Weight \t: " + item.getWeight();
+            }
+            case Milk ->
+            {
+                ItemMilk item = (ItemMilk) this;
+                info = "Item Information \n Id \t: " + item.getId() + "\nName \t: " + item.getName() + "\n Price \t: " + item.getPrice() +
+                        "\nIn stock\t: " + item.getQuantityInStock() + "\n Fat\t: " + item.getFat() +  "\n Liters \t: " + item.getLiters();
+            }
+            case Unknown ->
+            {
+                info = "Item Information inconnu";
+            }
+        }
+        return info;
     }
     
     public String toString() {

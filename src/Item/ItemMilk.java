@@ -26,6 +26,7 @@ public class ItemMilk extends Item{
     public void setLiters(double liters){this.liters = liters;}
     
     public String getInfoToString(){
-        return "";
+        return "Item Information \n Id \t: " + getId() + "\nName \t: " + getName() + "\n Price \t: " + getPrice() +
+                "\nIn stock\t: " + getQuantityInStock() + "\n Fat\t: " + getFat() +  "\n Liters \t: " + getLiters();
     }
 }
