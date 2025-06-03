@@ -34,7 +34,7 @@ public class TestingMain  {
 //        }
 
         System.out.println("\n=> TEST Enlever un item");                                            // 6 points
-        //inventoryManager.removeItem(10);
+        inventoryManager.removeItem(10);
 
         System.out.println("\n=> TEST Enlever un item non existant (catch exception)");             // 6 points
         //try {
@@ -66,14 +66,14 @@ public class TestingMain  {
         //}
 
         System.out.println("\n=> TEST Incrementer la quantité d'un item et afficher les nouvelles informations"); // 6 points
-        //inventoryManager.increaseItemQuantity(11, 25);
-        //Item item2 = inventoryManager.getItem(11);
-        //System.out.println(item2.infoToString());
+        inventoryManager.increaseItemQuantity(11, 25);
+        Item item2 = inventoryManager.getItem(11);
+        System.out.println(item2.infoToString());
 
         System.out.println("\n=> TEST Incrementer la quantité d'un item et afficher les nouvelles informations");// 6 points
-        //inventoryManager.increaseItemQuantity(11, 3);
-        //Item item3 = inventoryManager.getItem(11);
-        //System.out.println(item3.infoToString());
+        inventoryManager.increaseItemQuantity(11, 3);
+        Item item3 = inventoryManager.getItem(11);
+        System.out.println(item3.infoToString());
 
         System.out.println("\n=> Décrementer la quantité d'un item non existant (catch exception)");// 6 points
         //try {
@@ -90,10 +90,10 @@ public class TestingMain  {
         //}
 
         System.out.println("\n=> TEST Récupérer le array de items");// points
-        //Item[] items = inventoryManager.getArrayOfItems();
-        //for (Item item : items) {
-        //    System.out.println(item.infoToString());
-        //}
+        Item[] items = inventoryManager.getArrayOfItems();
+        for (Item item : items) {
+            System.out.println(item.infoToString());
+        }
         //IO//ecrireInventaire("items.out",inventoryManager);                                       // 9 points
 
         //G//GUIInventoryManager GUIInventoryManager = new GUIInventoryManager(inventoryManager);   // 20 points
