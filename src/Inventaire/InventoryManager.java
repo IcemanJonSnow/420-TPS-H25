@@ -1,5 +1,6 @@
 package Item.Inventaire;
 
+import Item.Exceptions.ExceptionInsufficientQuantityInStock;
 import Item.Exceptions.ExceptionItemAlreadyExists;
 import Item.Exceptions.ExceptionItemNotFound;
 import Item.Item.*;
@@ -48,7 +49,13 @@ public class InventoryManager {
         getItem(id).increaseQuantityInStock(quantity);
     }
     
-    public void decreaseItemQuantity(int id, int quantity){
+    public void decreaseItemQuantity(int id, int quantity) throws ExceptionInsufficientQuantityInStock, ExceptionItemNotFound {
+        if (getItem(id) == null) {
+            throw new ExceptionItemNotFound(id);
+        }
+        if (getItem(id).getQuantityInStock() < quantity) {
+            throw new ExceptionInsufficientQuantityInStock(quantity);
+        }
         getItem(id).decreaseQuantityInStock(quantity);
     }
     

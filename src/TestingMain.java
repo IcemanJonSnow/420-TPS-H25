@@ -76,18 +76,18 @@ public class TestingMain  {
         System.out.println(item3.infoToString());
 
         System.out.println("\n=> Décrementer la quantité d'un item non existant (catch exception)");// 6 points
-        //try {
-        //    inventoryManager.decreaseItemQuantity(10, 1);
-        //} catch (ExceptionItemNotFound e) {
-        //    System.out.println(e.getMessage());
-        //}
+        try {
+            inventoryManager.decreaseItemQuantity(10, 1);
+        } catch (ExceptionItemNotFound e) {
+            System.out.println(e.getMessage());
+        }
 
         System.out.println("\n=> TEST Trop décrémenter la quantité d'un item (catch exception)");   // 6 points
-        //try {
-        //    inventoryManager.decreaseItemQuantity(11, 32);
-        // } catch (ExceptionInsufficientQuantityInStock e) {
-        //    System.out.println(e.getMessage());
-        //}
+        try {
+            inventoryManager.decreaseItemQuantity(11, 32);
+         } catch (ExceptionInsufficientQuantityInStock e) {
+            System.out.println(e.getMessage());
+        }
 
         System.out.println("\n=> TEST Récupérer le array de items");// points
         Item[] items = inventoryManager.getArrayOfItems();
