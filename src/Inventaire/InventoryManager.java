@@ -1,5 +1,6 @@
 package Item.Inventaire;
 
+import Item.Exceptions.ExceptionItemAlreadyExists;
 import Item.Item.*;
 
 public class InventoryManager {
@@ -8,17 +9,26 @@ public class InventoryManager {
 
     public InventoryManager() {}
 
-    public void addNewBreadItem(int id, String name, double price, String color, int weight){
+    public void addNewBreadItem(int id, String name, double price, String color, int weight) throws ExceptionItemAlreadyExists {
+        if (getItem(id) != null) {
+            throw new ExceptionItemAlreadyExists("Item " + id + " est déjà dans la bases de données");
+        }
         ItemBread newItem = new ItemBread(Category.Bread, id, name, price, color, weight);
         inventaire.insert(newItem);
     }
 
-    public void addNewEggsItem(int id, String name, double price, String color, int number){
+    public void addNewEggsItem(int id, String name, double price, String color, int number) throws ExceptionItemAlreadyExists {
+        if (getItem(id) != null) {
+            throw new ExceptionItemAlreadyExists("Item " + id + " est déjà dans la bases de données");
+        }
         ItemEggs newItem = new ItemEggs(Category.Eggs, id, name, price, color, number);
         inventaire.insert(newItem);
     }
 
-    public void addNewMilkItem(int id, String name, double price, double fat, double liters){
+    public void addNewMilkItem(int id, String name, double price, double fat, double liters) throws ExceptionItemAlreadyExists {
+        if (getItem(id) != null) {
+            throw new ExceptionItemAlreadyExists("Item " + id + " est déjà dans la bases de données");
+        }
         ItemMilk newItem = new ItemMilk(Category.Milk, id, name, price, fat, liters);
         inventaire.insert(newItem);
     }

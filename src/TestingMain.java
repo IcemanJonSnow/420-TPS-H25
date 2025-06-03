@@ -4,7 +4,7 @@ import Item.Item.*;
 
 public class TestingMain  {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception{
         //
         // TODO -- Dé-commentez les lignes autres que //IO// et //G// au fur et à mesure de votre implémentation
         //         Éventuellement, tous les tests devraient fonctionner et vous devriez
@@ -27,11 +27,11 @@ public class TestingMain  {
         System.out.println(item1.infoToString());
 
         System.out.println("\n=> TEST Création d'un item avec un ID existant");                     // 6 points
-//        try {
-//            inventoryManager.addNewBreadItem(10, "Pain bio", 5, "brun", 400);
-//        } catch (ExceptionItemAlreadyExists e) {
-//            System.out.println(e.getMessage());
-//        }
+        try {
+            inventoryManager.addNewBreadItem(10, "Pain bio", 5, "brun", 400);
+        } catch (ExceptionItemAlreadyExists e) {
+            System.out.println(e.getMessage());
+        }
 
         System.out.println("\n=> TEST Enlever un item");                                            // 6 points
         inventoryManager.removeItem(10);
