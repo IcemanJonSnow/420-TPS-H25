@@ -48,23 +48,36 @@ public class InventoryDatabase {
         else {
             InventoryDatabaseNode current = first;
             
-            while (current.next.item.getId() != id){
-                current = current.next;
+            if (first.item.getId() == id){
+                first = first.next;
+                itemsCount--;
             }
-            current.next = current.next.next;
-            itemsCount--;
+            else{
+                for (int i = 0; i < itemsCount; i++){
+                    if (current.item.getId() == id){
+                        current.next = current.next.next;
+                        itemsCount--;
+                    }
+                }
+            }
         }
     }
     
     
     public Item[] getArrayOfitems(){
         Item[] items = new Item[itemsCount];
-        for(int i = 0; i < itemsCount; i++){
-            InventoryDatabaseNode current = first;
-            while (current.next != null){
-                items[i] = current.item;
-                current = current.next;
-            }
+//        int index = 1;
+        InventoryDatabaseNode current = first;
+//        items[0] = first.item;
+//        while (current.next != null){
+//            items[index] = current.next.item;
+//            index++;
+//            current = current.next;
+//        }
+        
+        for (int i = 0; i < itemsCount; i++){
+            items[i] = current.item;
+            current = current.next;
         }
         return items;
     }
