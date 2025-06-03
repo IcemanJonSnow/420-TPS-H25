@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import Item.Item.*;
 
 public class GUIItemDialog extends JDialog {
     private Item item;
@@ -24,7 +25,7 @@ public class GUIItemDialog extends JDialog {
         contentPane.setLayout(new GridLayout(6, 2));
 
         contentPane.add(new JLabel("ID"));
-        JTextField fieldID = new JTextField("" + item.getID());
+        JTextField fieldID = new JTextField("" + item.getId());
         fieldID.setEditable(false);
         fieldID.setBackground(contentPane.getBackground());
         contentPane.add(fieldID);
